@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import { Poppins } from '@next/font/google'
 import { motion } from "framer-motion"
-import Navbar from './Navbar'
+import Image from 'next/image'
+import HeroImage from "../public/illustration.png"
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -14,13 +14,12 @@ const HeroSection = () => {
   return (
     <>
       <div className="section" id="hero">
-        <Navbar />
         <div className='hero-container'>
           <div className='hero-left'>
             <text>Hi, my name is </text>
             <h1 className={poppins.className}>Adriaan Boshoff</h1>
             
-            <div
+            <h3
               // initial={{ x: -100 }}
               // animate={{
               //   x: [-100, 100, 0 ]
@@ -49,15 +48,22 @@ const HeroSection = () => {
                 <motion.span hidden> creating value</motion.span>
                 <motion.span hidden> pizza</motion.span>
               </span>
-            </div>
+            </h3>
           </div>
           <div className='hero-right'>
-            <div className='hero-image'></div>
+            <div className='hero-image'>
+              <Image alt="pizza man" src={HeroImage} height={366} width={440}></Image>
+            </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
+        .hero-right {
+          position: relative;
+          width: 40%;
+          left: -50px;
+        }
         .hero-container {
           display: flex;
           flex-direction: row;
@@ -68,17 +74,16 @@ const HeroSection = () => {
           flex-direction: column;
           justify-content: center;
           padding: 1rem;
+          z-index: 2;
         }
 
         .hero-left h1 {
-          font-size: 4rem;
-          line-height: 5rem;
+          width: 100%;
           font-weight: 400;
           letter-spacing: -0.04em;
         }
 
         .hero-left span {
-          font-size: 2rem;
           font-weight: 500;
         }
 
@@ -87,11 +92,30 @@ const HeroSection = () => {
         }
 
         .hero-image{
-          background-color: var(--accent-secondary);
-          width: 350px;
-          height: 350px;
+          position: relative;
+          max-width: 100vw;
         }
 
+        /* Mobile */
+        @media (max-width: 700px) {
+          .hero-right {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: 150px;
+            left: 0;
+            top: -100px;
+            z-index: 0;
+        }
+        }
+
+        /* Tablet and Smaller Desktop */
+        @media (min-width: 701px) and (max-width: 1120px) {
+          .hero-right {
+
+          }
+        }
 
       `}</style>
     </>

@@ -1,14 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
+import sats_v2 from "../public/project-images/satstobits_v2.png";
+import sats_v1 from "../public/project-images/satstobits_v1.png";
+import savedave from "../public/project-images/save_dave.png";
+import edie from "../public/project-images/edie_demo.png";
+
 
 const ProjectSection = () => {
   return (
     <>
       <div className="section" id="projects">      
         <h2 className="section-title">Projects</h2>
+        
         <div className="project-item">
-          <div className="project-image"></div>
+          <div className="project-image">
+            <Image alt="crypto trading journal" src={sats_v2} width={627/1.5} height={402/1.5}></Image>
+          </div>
           <div className="project-text">
-            <h2>Project X</h2>
+            <h2>SatsToBits - Trading Journal</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div className="project-link">
@@ -16,20 +25,26 @@ const ProjectSection = () => {
             </div>
           </div>
         </div>
+
         <div className="project-item">
-          <div className="project-image"></div>
+          <div className="project-image">
+            <Image alt="save-dave budget app" src={savedave} width={449/1.5} height={348/1.5}></Image>
+          </div>
           <div className="project-text">
-            <h2>Project X</h2>
+            <h2>Expense tracker</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div className="project-link">
               <Link href=''>Github</Link>
             </div>
           </div>
         </div>
+        
         <div className="project-item">
-          <div className="project-image"></div>
+          <div className="project-image">
+            <Image alt="crypto coin tracker" src={sats_v1} width={640/1.5} height={430>1.5}></Image>
+          </div>
           <div className="project-text">
-            <h2>Project X</h2>
+            <h2>SatsToBits V1 - Crypto tracker</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div className="project-link">
               <Link href=''>Github</Link>
@@ -38,10 +53,13 @@ const ProjectSection = () => {
             </div>
           </div>
         </div>
+        
         <div className="project-item">
-          <div className="project-image"></div>
+          <div className="project-image">
+            <Image alt="company profile website" src={edie} width={627/1.5} height={406/1.5}></Image>
+          </div>
           <div className="project-text">
-            <h2>Project X</h2>
+            <h2>Edie company website</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div className="project-link">
               <Link href=''>Github</Link>
@@ -80,10 +98,9 @@ const ProjectSection = () => {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 45%;
+        width: 50%;
         min-width: 320px;
-        background-color: var(--bg-primary);
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
        }
 
        .project-text h2 {
@@ -91,10 +108,11 @@ const ProjectSection = () => {
        }
 
        .project-image {
-        width: 55%;
+        display: flex;
+        justify-content: center;
+        width: 50%;
         min-width: 350px;
-        height: 420px;
-        background-color: var(--bg-secondary);
+        max-height: 420px;
        }
 
        .project-link {
@@ -111,6 +129,13 @@ const ProjectSection = () => {
         .project-item {
           height: 100vh;
         }
+
+        .project-image {
+
+          width: 100%;
+          height: 40%;
+        }
+
 
        }
 

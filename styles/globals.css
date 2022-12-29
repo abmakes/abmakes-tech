@@ -92,7 +92,7 @@ h3 {
 /* 
   NAVBAR FORMATIING
 */
-.nav-item, .mobile-nav-item {
+.nav-item {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -100,12 +100,25 @@ h3 {
   padding: 1rem;
 }
 
-.nav-item, .mobile-nav-item li {
+.nav-item {
   cursor: pointer;
 }
 
-.nav-item, .mobile-nav-item li:hover {
+.nav-item{
   color: var(--accent-primary);
+}
+
+.mobile-list-item {
+  list-style: none;
+  font-size: large;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #991b1b;
+}
+
+.mobile-list-item:hover {
+  background-color: var(--accent-secondary);
 }
 
 /* Mobile */

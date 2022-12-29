@@ -37,13 +37,9 @@ const Navbar = () => {
           <ul className="mobile-nav-item" 
             onClick={() => setMenuActive(!menuActive)}
           >
-            <li variants={item}>
-              <Link href="#projects">Projects</Link>
-            </li>
-            <li variants={item}>About</li>
-            <li variants={item}>
-              <Link href="#contact">Contact</Link>
-            </li>
+              <Link href="#projects" className='mobile-list-item'>Projects</Link>
+              <Link href="#about" className='mobile-list-item'>About</Link>
+              <Link href="#contact" className='mobile-list-item'>Contact</Link>
           </ul>
       </nav>
       <style jsx>{`
@@ -59,20 +55,25 @@ const Navbar = () => {
           padding: 0 1rem;
         }
 
-        .mobile-menu {
+        .mobile-nav-item {
           display: flex;
-          justify-content: flex-end;
+          flex-direction: column;
+        }
+        .mobile-menu {
           position: absolute;
-          top: 100px;
+          top: 80px;
           width: 100%;
           background-color: var(--bg-secondary);
         }
 
         .mobile-nav-item {
           flex-direction: column;
-          align-items: space-around;
-          gap: 1rem;
+          align-items: center;
+          justify-content: center;
+          gap: 0;
+          width: 100%;
         }
+
 
         .hamburger {
           display: none;

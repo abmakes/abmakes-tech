@@ -1,8 +1,13 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+
   --accent-primary: #991b1b;
   --accent-secondary: #b500005a;
+
+  --accent-primary: #1d4ed8;
+  --accent-secondary: #1d4fd883;
+
   --fg-text: #171717;
   --fg-heading: #12100f;
   --bg-primary: #fafaf9;
@@ -15,7 +20,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg-text: #fafaf9;
+    --fg-text: #d6d3d1;
     --fg-heading: #e4e4e7;
     --bg-primary: #12100f;
     --bg-secondary: #171717;
@@ -46,7 +51,8 @@ a {
   Font settings 
 */
 p {
-  font-size: 16px;
+  color: var(--fg-text);
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.08em;
   font-weight: 300;
@@ -135,8 +141,8 @@ h3 {
   }
 
   h2 {
-    font-size: 36px;
-    line-height: 45px;
+    font-size: 28px;
+    line-height: 35px;
   }
   
   h3 {
@@ -170,3 +176,10 @@ h3 {
   color: var(--accent-primary)
 }
 
+.project-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 350px;
+  padding: 1rem;
+}

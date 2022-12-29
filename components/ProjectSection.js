@@ -4,6 +4,7 @@ import sats_v2 from "../public/project-images/satstobits_v2.png";
 import sats_v1 from "../public/project-images/satstobits_v1.png";
 import savedave from "../public/project-images/save_dave.png";
 import edie from "../public/project-images/edie_demo.png";
+import { motion } from "framer-motion"
 
 
 const ProjectSection = () => {
@@ -13,13 +14,26 @@ const ProjectSection = () => {
         <h2 className="section-title">Projects</h2>
         
         <div className="project-item">
-          <div className="project-image">
-            <Image alt="crypto trading journal" src={sats_v2} width={627/1.5} height={402/1.5}></Image>
-          </div>
+          <motion.div 
+            className="project-image"
+            initial={{ x:-200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}v
+          >
+            <Image 
+              alt="crypto trading journal" 
+              src={sats_v2}
+              style={{
+                width: '100%',
+                maxWidth: '750px',
+                aspectRatio: 620 / 400,
+                height: 'auto',
+              }} 
+            ></Image>
+          </motion.div>
           <div className="project-text">
             <h2>SatsToBits - Trading Journal</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div className="project-link">
               <Link href=''>Visit site</Link>
             </div>
@@ -27,9 +41,22 @@ const ProjectSection = () => {
         </div>
 
         <div className="project-item">
-          <div className="project-image">
-            <Image alt="save-dave budget app" src={savedave} width={449/1.5} height={348/1.5}></Image>
-          </div>
+          <motion.div 
+              className="project-image"
+              initial={{ x:-200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+            >
+            <Image 
+              alt="save-dave budget app" 
+              src={savedave}
+              style={{
+                width: '100%',
+                maxWidth: '650px',
+                aspectRatio: 450 / 350,
+                height: 'auto',
+                  }}  
+            ></Image>
+          </motion.div>
           <div className="project-text">
             <h2>Expense tracker</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -40,9 +67,22 @@ const ProjectSection = () => {
         </div>
         
         <div className="project-item">
-          <div className="project-image">
-            <Image alt="crypto coin tracker" src={sats_v1} width={640/1.5} height={430>1.5}></Image>
-          </div>
+          <motion.div 
+            className="project-image"
+            initial={{ x:-200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+          >
+            <Image 
+              alt="crypto coin tracker" 
+              src={sats_v1}
+              style={{
+                width: '100%',
+                maxWidth: '750px',
+                aspectRatio: 640 / 430,
+                height: 'auto',
+              }}  
+            ></Image>
+          </motion.div>
           <div className="project-text">
             <h2>SatsToBits V1 - Crypto tracker</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -55,9 +95,22 @@ const ProjectSection = () => {
         </div>
         
         <div className="project-item">
-          <div className="project-image">
-            <Image alt="company profile website" src={edie} width={627/1.5} height={406/1.5}></Image>
-          </div>
+          <motion.div 
+            className="project-image"
+            initial={{ x:-200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+          >
+            <Image 
+              alt="company profile website" 
+              src={edie} 
+              style={{
+                width: '100%',
+                maxWidth: '750px',
+                aspectRatio: 620 / 400,
+                height: 'auto',
+              }}
+            ></Image>
+          </motion.div>
           <div className="project-text">
             <h2>Edie company website</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -68,11 +121,12 @@ const ProjectSection = () => {
           </div>
         </div>
       </div>
+
       <style jsx>{`
        .section {
         height: 100%;
         flex-direction: column;
-        overflow-y: scroll;
+        padding-bottom: 4rem;
        }
        .project-link {
         display: flex;
@@ -86,7 +140,7 @@ const ProjectSection = () => {
        }
 
        .project-item {
-        height: 100%;
+        height: 80vh;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -98,7 +152,7 @@ const ProjectSection = () => {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 50%;
+        width: 80%;
         min-width: 320px;
         padding: 1rem 3rem;
        }
@@ -110,10 +164,10 @@ const ProjectSection = () => {
        .project-image {
         display: flex;
         justify-content: center;
-        width: 50%;
+        width: 100%;
         min-width: 350px;
-        max-height: 420px;
        }
+
 
        .project-link {
         margin-top: 1rem;
@@ -128,12 +182,11 @@ const ProjectSection = () => {
 
         .project-item {
           height: 100vh;
+          padding-bottom: 4rem;
         }
 
         .project-image {
-
           width: 100%;
-          height: 40%;
         }
 
 

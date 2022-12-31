@@ -4,7 +4,7 @@ import Link from 'next/link'
 const ContactSection = () => {
   return (
     <>
-      <div className="section" id="contact">
+      <div className="section" id="contact">      
         <div className='contact-left'>        
           <motion.div
             className='contact-text'
@@ -35,23 +35,57 @@ const ContactSection = () => {
           </motion.div>
         </div>
 
-        <div className='contact-right'>
-          <motion.div
-            initial={{ x: 200, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-          >
-            <div className='form-group'>
-              <input type="text" placeholder='email'></input>
-              <input type="text" placeholder='subject'></input>
-              <input type="text-area" placeholder='message'></input>
-              <button type='submit'>Send message</button>
+        <motion.div 
+          className='contact-right'
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+        >
+          <form className='form-group' onSubmit={(e) => {
+              const { message, email, subject } = e.target
+              e.preventDefault();
+              console.log(email.value, subject.value, message.value)
+            }}>
+            <div className="input-group">      
+              <input id="email" type="text" required></input>
+              <label>email</label>
             </div>
-          </motion.div>
-        </div>
+            <div className="input-group">      
+              <input id="subject" type="text" required></input>
+              <label>subject</label>
+            </div>
+            <div className="input-group">      
+              <textarea id="message" rows="4" required></textarea>
+              <label>type your message</label>
+            </div>
+            <button type='submit'>Send message</button>
+          </form>
+          <div className='back-to-top'>^</div>         
+        </motion.div>
+        
       </div>
-      <style jsx>{`
 
-        .thanks {
+      <style jsx>{`
+        .back-to-top {
+          font-size: 64px;
+          text-align: center;
+          background-color: var(--fg-heading);
+          color: #171717;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 4px solid var(--bg-primary);
+          position: absolute;
+          z-index: 3;
+          right: 20px;
+          align-self: flex-end;
+          cursor: pointer;
+        }
+
+        .back-to-top:hover {
+          filter: invert(100%);
+        }
+
+        .thanks {10
           display: flex;
           flex-wrap: wrap;
           padding: 0 1rem 0 2rem;
@@ -61,24 +95,10 @@ const ContactSection = () => {
           flex-direction: row;
           flex-wrap: wrap;
         }
-        .contact-right, .contact-left {
-          height: 100%;
-          width: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
-        .contact-left h3 {
-          font-weight: 400;
-          margin-bottom: 1rem;
-        }
-
-        .contact-right {
-          background-color: var(--accent-secondary);
-        }
 
         .form-group {
+          width: 100%;
           display: flex;
           flex-direction: column;
           padding: 2rem;
@@ -87,18 +107,15 @@ const ContactSection = () => {
           align-items: center;
         }
 
-        input[type=text], input[type=text-area] {
+        input[type=text], textarea {
+          margin-top: 1rem;
+          display: block;
           background-color: #fafaf9;
           color: #171717;
           width: 100%;
           padding: 0.7rem 1rem;
           border-radius: 0.5rem;
           border: none;
-        }
-
-        input[type=text-area] { 
-          height: 6rem;
-          width: 18rem;
         }
 
         button {
@@ -110,28 +127,43 @@ const ContactSection = () => {
         }
 
         .social-icons {
-          display: flex;
+          display: flex;Name
           flex-direction: row;
           gap: 2rem;
           justify-content: center;
-          padding: 2rem;
+          padding: 1rem 2rem 0 2rem;
+        }
+        /* floating labels */
+        .input-group { 
+          width: 100%;
+          max-width: 350px;
+          position:relative; 
+        }
+        label {
+          color: #333333; 
+          font-size:14px;
+          position:absolute;
+          pointer-events:none;
+          left: 1rem;
+          top: 1.6rem;
+          transition:0.2s ease all; 
+          -moz-transition:0.2s ease all; 
+          -webkit-transition:0.2s ease all;
         }
 
-        /* Mobile */
-        @media (max-width: 700px) {
-          .contact-left, .contact-right {
-            height: 50%;
-            width: 100%;
-          }
+        /* active state */
+        input[type=text]:focus + label, textarea:focus + label {
+          top:-0.5rem;
+          font-size:14px;
+          color: #fafaf9;
         }
 
-        /* Tablet and Smaller Desktop */
-        @media (min-width: 701px) and (max-width: 1120px) {
-          .contact-left, .contact-right {
-            height: 50%;
-            width: 100%;
-          }
+        input:focus { outline:none;}
+
+        input:valid + label, textarea:valid + label {
+          display: none;
         }
+
       `}</style>
     </>
   );

@@ -17,7 +17,7 @@ const ProjectSection = () => {
           <motion.div 
             className="project-image"
             initial={{ x:-200, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}v
+            whileInView={{ x: 0, opacity: 1 }}
           >
             <Image 
               alt="crypto trading journal" 
@@ -31,7 +31,9 @@ const ProjectSection = () => {
             ></Image>
           </motion.div>
           <div className="project-text">
-            <h2>SatsToBits - Trading Journal</h2>
+            <h2>SatsToBits</h2>
+            <h3>A Bitcoin trading journal with trade signals</h3>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div className="project-link">
@@ -58,10 +60,14 @@ const ProjectSection = () => {
             ></Image>
           </motion.div>
           <div className="project-text">
-            <h2>Expense tracker</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h2>Save Dave</h2>
+            <h3>An expense tracker</h3>
+            <p>This expense tracker inverts the normal flow of data capture. You enter your end of day  account balance and then expand n the details.</p>
+            <p>Built using create react app and vanilla CSS, the goal was to experiment with forms and sliders. It has a neo-brutalist styled UI as it is a nice fit with the apps theme.</p>
+            <p>It was built for mobile first and uses local browser storage used for the app data</p>
             <div className="project-link">
-              <Link href=''>Github</Link>
+              <Link href='https://github.com/abmakes/dave-expense-tracker'>Github</Link>
+              <Link href='https://save-dave.netlify.app/'>Visit site</Link>
             </div>
           </div>
         </div>
@@ -84,12 +90,14 @@ const ProjectSection = () => {
             ></Image>
           </motion.div>
           <div className="project-text">
-            <h2>SatsToBits V1 - Crypto tracker</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h2>SatsToBits V1</h2>
+            <h3>A cryptocurrency coin tracker</h3>
+            <p>
+            The project was built using Django and Javascript. Bootstrap was used in combination with django templating to the design the frontend. Bootstraps opinionated style and easy components allowed for a focus on the functionality and interactions of the app. </p>
+            
+            <p>The app included a search function of the top 500 cryptocurrencies and wishlisting of your favourite coins. App was hosted on Heroku but is no longer no longer live due to platform changes.</p>
             <div className="project-link">
-              <Link href=''>Github</Link>
-              <Link href=''>Visit site</Link>
-
+              <Link href='https://github.com/abmakes/crypto_watchlist_app'>Github</Link>
             </div>
           </div>
         </div>
@@ -112,17 +120,30 @@ const ProjectSection = () => {
             ></Image>
           </motion.div>
           <div className="project-text">
-            <h2>Edie company website</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h2>Edie</h2>
+            <h3>A perfomance optimised company website</h3>
+            <p>This is a demo website for an fictional Edie company. Built as a frontend layout and design experiment, the challenge was to build and match the Figma design as closely as possible.</p> 
+            <p>Thereafter it also allowed for the practice in deploying, and optimizing nextJs sites on Netlify. The site achieved a perfect score in Google Lighthouse.</p>
             <div className="project-link">
-              <Link href=''>Github</Link>
-              <Link href=''>Visit site</Link>
+              <Link href='https://www.figma.com/file/ahnGupP4JjTdVJDTRfMRF2/edie-homepage?node-id=0%3A1'>Figma Design</Link>
+              <Link href='https://github.com/abmakes/Company-profile-nextjs'>Github</Link>
+              <Link href='https://the-edie-company.netlify.app/'>Visit site</Link>
             </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
+        .project-text h2 {
+          font-size: ;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+        .project-text h3 {
+          padding-bottom: 1rem;
+          font-size: 28px;
+          font-weight: 300;
+        }
        .section {
         height: 100%;
         flex-direction: column;
@@ -140,11 +161,11 @@ const ProjectSection = () => {
        }
 
        .project-item {
-        height: 80vh;
+        height: 100vh;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 1rem;
+        padding: 4rem;
         margin-bottom: 2rem;
        }
 
@@ -154,11 +175,7 @@ const ProjectSection = () => {
         justify-content: center;
         width: 80%;
         min-width: 320px;
-        padding: 1rem 3rem;
-       }
-
-       .project-text h2 {
-        margin-bottom: 1rem;
+        padding: 1rem 2rem;
        }
 
        .project-image {
@@ -181,12 +198,17 @@ const ProjectSection = () => {
         }
 
         .project-item {
-          height: 100vh;
-          padding-bottom: 4rem;
+          height: 100%;
+          padding: 3rem 0rem;
         }
 
         .project-image {
           width: 100%;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
         }
 
 

@@ -8,6 +8,11 @@
   --accent-primary: #1d4ed8;
   --accent-secondary: #1d4fd883;
 
+/* GRADIENT BACKGROUND */
+  /* https://codepen.io/P1N2O/pen/pyBNzX */
+
+
+
   --fg-text: #171717;
   --fg-heading: #12100f;
   --bg-primary: #fafaf9;
@@ -34,11 +39,16 @@
   margin: 0;
 }
 
-html,
+html {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-primary);
+}
+
 body {
   display: flex;
   justify-content: center;
-  max-width: 100vw;
+  max-width: 1600px;
   overflow-x: hidden;
 }
 
@@ -182,4 +192,81 @@ h3 {
   width: 100%;
   min-width: 350px;
   padding: 1rem;
+}
+
+.contact-right, .contact-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-left h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.contact-right {
+  background-color: var(--accent-secondary);
+}
+
+/* floating labels */
+.input-group { 
+  width: 100%;
+  max-width: 350px;
+  position:relative; 
+}
+label {
+  color: #333333; 
+  font-size:14px;
+  position:absolute;
+  pointer-events:none;
+  left: 1rem;
+  top: 0.6rem;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text], input[type=text-area] {
+  display: block;
+  background-color: #fafaf9;
+  color: #171717;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+input[type=text-area] { 
+  display: block;
+  height: 6rem;
+  width: 18rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .contact-left, .contact-right {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .contact-left, .contact-right {
+    height: 50%;
+    width: 100%;
+  }
 }

@@ -1,7 +1,7 @@
 import { Poppins } from '@next/font/google'
 import { motion } from "framer-motion"
 import Image from 'next/image'
-import HeroImage from "../public/illustration.png"
+import HeroImage from "../public/portrait.png"
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -51,8 +51,8 @@ const HeroSection = () => {
             </h3>
           </div>
           <div className='hero-right'>
-            <div className='hero-image'>
-              <Image alt="pizza man" src={HeroImage} height={366} width={440}></Image>
+            <div className='hero-image' style={{imageRendering: "pixelated"}}>
+              <Image alt="blue man" src={HeroImage} height={300} width={300} quality={100}></Image>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ const HeroSection = () => {
         }
 
         .hero-image{
-          position: relative;
+          position: absolute;
           max-width: 100vw;
         }
 

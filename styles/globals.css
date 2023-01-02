@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1100px;
+  --max-width: 1200px;
   --border-radius: 12px;
 
   --accent-primary: #991b1b;
@@ -48,7 +48,7 @@ html {
 body {
   display: flex;
   justify-content: center;
-  max-width: 1600px;
+  max-width: 1200px;
   overflow-x: hidden;
 }
 
@@ -109,6 +109,7 @@ h3 {
   NAVBAR FORMATIING
 */
 .nav-item {
+  color: var(--fg-primary);
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -116,11 +117,11 @@ h3 {
   padding: 1rem;
 }
 
-.nav-item {
+.nav-item{
   cursor: pointer;
 }
 
-.nav-item{
+a:hover {
   color: var(--accent-primary);
 }
 
@@ -128,9 +129,10 @@ h3 {
   list-style: none;
   font-size: large;
   width: 100%;
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #991b1b;
+  padding: 0.6rem;
+  text-align: right;
+  border-right: 2px solid var(--accent-primary);
+  margin-right: 1rem;
 }
 
 .mobile-list-item:hover {
@@ -208,6 +210,8 @@ h3 {
 }
 
 .contact-right {
+  display: flex;
+  flex-direction: column;
   background-color: var(--accent-secondary);
 }
 

@@ -3,7 +3,6 @@ import { Inter } from '@next/font/google'
 import HeroSection from '../components/HeroSection'
 import ProjectSection from '../components/ProjectSection'
 import ContactSection from '../components/ContactSection'
-import Navbar from '../components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +16,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={inter.className}>
-        <Navbar />
         <HeroSection />
         <ProjectSection />
         <ContactSection />

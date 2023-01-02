@@ -1,7 +1,8 @@
 import { Poppins } from '@next/font/google'
 import { motion } from "framer-motion"
 import Image from 'next/image'
-import HeroImage from "../public/portrait.png"
+import HeroImage from "../public/portrait2.png"
+import Navbar from '../components/Navbar'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -14,6 +15,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="section" id="hero">
+        <Navbar />
         <div className='hero-container'>
           <div className='hero-left'>
             <text>Hi, my name is </text>
@@ -33,17 +35,17 @@ const HeroSection = () => {
               <span>I love </span>
               <span>
                 <motion.div
-                      className='love-1'
-                      animate={{
-                        rotateX: [0, 360]
-                      }}
-                      transition={{
-                        duration: 2,
-                        type: "spring",
-                        times: [0, 0.5, 1],
-                        repeat: Infinity,
-                        repeatDelay: 2
-                      }}
+                  className='love-1'
+                  animate={{
+                    rotateX: [0, 360]
+                  }}
+                  transition={{
+                    duration: 2,
+                    type: "spring",
+                    times: [0, 0.5, 1],
+                    repeat: Infinity,
+                    repeatDelay: 2
+                  }}
                 > web development</motion.div>
                 <motion.span hidden> creating value</motion.span>
                 <motion.span hidden> pizza</motion.span>
@@ -51,30 +53,45 @@ const HeroSection = () => {
             </h3>
           </div>
           <div className='hero-right'>
-            <div className='hero-image' style={{imageRendering: "pixelated"}}>
-              <Image alt="blue man" src={HeroImage} height={300} width={300} quality={100}></Image>
+            <div className='hero-image' 
+              style={{imageRendering: "crisp-edges"}}
+            >
+              <Image 
+                alt="blue man" 
+                src={HeroImage}
+                style={{
+                  width: '50vw',
+                  maxWidth: '300px',
+                  aspectRatio: 1 / 1,
+                  height: 'auto',
+                }}  
+                quality={100}
+              ></Image>
             </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        .hero-right {
-          position: relative;
-          width: 40%;
-          left: -50px;
-        }
         .hero-container {
           display: flex;
           flex-direction: row;
+          flex-wrap: wrap;
         }
         
+        .hero-right {
+          display: flex;
+          height: 50vh;
+          justify-content: center;
+          align-items: center;
+        }
+
         .hero-left {
+          height: 50vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding: 1rem;
-          z-index: 2;
         }
 
         .hero-left h1 {
@@ -87,27 +104,18 @@ const HeroSection = () => {
           font-weight: 500;
         }
 
-        .heroText {
-          display: flex;
-        }
-
-        .hero-image{
-          position: absolute;
-          max-width: 100vw;
-        }
-
         /* Mobile */
         @media (max-width: 700px) {
           .hero-right {
             display: flex;
-            justify-content: center;
-            position: relative;
+            align-items: flex-start;
             width: 100%;
-            height: 150px;
-            left: 0;
-            top: -100px;
-            z-index: 0;
-        }
+            height: 50vh;
+          }
+
+          .hero-left {
+            justify-content: flex-end;
+          }
         }
 
         /* Tablet and Smaller Desktop */

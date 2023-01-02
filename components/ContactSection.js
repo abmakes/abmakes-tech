@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image';
+import toTop from '../public/toTop.svg'
 
 const ContactSection = () => {
   return (
@@ -59,32 +61,32 @@ const ContactSection = () => {
             </div>
             <button type='submit'>Send message</button>
           </form>
-          <div className='back-to-top'>^</div>         
+          <div className='back-to-top'>
+            <Link alt='to-top' href='/'>
+              <Image 
+                alt="to top button" 
+                src={toTop} 
+                width={38} 
+                height={81}
+                style={{
+                  position: "relative",
+                  right: "0px",
+                  bottom: "10px",
+                  zindex: "3",
+                  cursor: "pointer",
+                  color: "#000000",
+                }}
+              ></Image>
+            </Link>
+          </div>
         </motion.div>
         
       </div>
 
       <style jsx>{`
         .back-to-top {
-          font-size: 64px;
-          text-align: center;
-          background-color: var(--fg-heading);
-          color: #171717;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          border: 4px solid var(--bg-primary);
-          position: absolute;
-          z-index: 3;
-          right: 20px;
-          align-self: flex-end;
-          cursor: pointer;
-        }
 
-        .back-to-top:hover {
-          filter: invert(100%);
         }
-
         .thanks {10
           display: flex;
           flex-wrap: wrap;
@@ -123,7 +125,14 @@ const ContactSection = () => {
           color: #fafaf9;
           border-radius: 0.5rem;
           border: none;
-          padding: 0.5rem 1rem;
+          padding: 0.5rem 2rem;
+        }
+
+        button:hover {
+          background-color: #fafaf9;
+          color: var(--accent-primary);
+          font-weight: 700;
+          cursor: pointer;
         }
 
         .social-icons {

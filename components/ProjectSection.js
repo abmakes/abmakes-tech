@@ -7,7 +7,7 @@ import edie from "../public/project-images/edie_demo.png";
 import { motion } from "framer-motion"
 import javascript from "../public/tech-icons/javascript.svg";
 import django from "../public/tech-icons/django.svg";
-import nextjs from "../public/tech-icons/NextJs-Dark.svg";
+import nextjs from "../public/tech-icons/NextJS-Dark.svg";
 import react from "../public/tech-icons/react-icon.svg";
 import css from "../public/tech-icons/icons8-css3.svg";
 import redux from "../public/tech-icons/Redux.svg";

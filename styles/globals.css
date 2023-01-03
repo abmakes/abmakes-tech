@@ -105,39 +105,13 @@ h3 {
   color: var(--fg-heading);
 }
 
-/* 
-  NAVBAR FORMATIING
-*/
-.nav-item {
-  color: var(--fg-primary);
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  padding: 1rem;
-}
 
-.nav-item{
-  cursor: pointer;
-}
 
 a:hover {
   color: var(--accent-primary);
 }
 
-.mobile-list-item {
-  list-style: none;
-  font-size: large;
-  width: 100%;
-  padding: 0.6rem;
-  text-align: right;
-  border-right: 2px solid var(--accent-primary);
-  margin-right: 1rem;
-}
 
-.mobile-list-item:hover {
-  background-color: var(--accent-secondary);
-}
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -273,4 +247,46 @@ input[type=text-area] {
     height: 50%;
     width: 100%;
   }
+}
+
+.gradient-shift {
+  clip-path: url(#dough);
+  background: linear-gradient(121deg, #0027ff, #09005a, #00d2ae, #0a196b);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradientShift 16s ease infinite;
+  -moz-animation: gradientShift 16s ease infinite;
+  animation: gradientShift 16s ease infinite;
+}
+
+@-webkit-keyframes gradientShift {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientShift {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes gradientShift {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.fill-primary {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+}
+.gradient-border {
+  padding: 3px;
+  border-radius: 5px;
+  background: linear-gradient(121deg, #0027ff, #09005a, #00d2ae, #0a196b);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradientShift 10s ease infinite;
+  -moz-animation: gradientShift 10s ease infinite;
+  animation: gradientShift 10s ease infinite;
 }

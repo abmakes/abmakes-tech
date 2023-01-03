@@ -8,8 +8,8 @@ import email from '../public/social/gmail.svg'
 
 
 const Navbar = () => {
-  const list = { opacity: 0 }
-  const item = { x: -10, opacity: 1 }
+  // const list = { opacity: 0 }
+  // const item = { x: -10, opacity: 1 }
   const [menuActive, setMenuActive] = useState(false)
   
   return (
@@ -20,29 +20,13 @@ const Navbar = () => {
             <Image alt='alb-logo' src="/logo.svg" width="74" height="47" className='filter-white'></Image>
           </Link>
         </div>
-        <nav className='menu'>
-          <motion.ul animate="hidden" variants={list} className="nav-item">
-            <motion.li variants={item}>
-              <Link href="#projects">Projects.</Link>
-            </motion.li>
-            <motion.li variants={item}>About.</motion.li>
-            <motion.li variants={item}>
-              <Link href="#contact">Contact.</Link>
-            </motion.li>
-          </motion.ul>
-        </nav>
+            
+        <span className={!menuActive?'show':'hidden'} onClick={() => setMenuActive(!menuActive)}>menu.</span>
 
-        <nav className='hamburger' onClick={() => setMenuActive(!menuActive)}>   
-          <div className='burger'></div>
-          <div className='burger'></div>
-          <div className='burger'></div>
-          {/* <Image alt='mobile-menu' src="/burgermenu.svg" width="48" height="48" className='filter-white'></Image> */}
-        </nav>
-      </div>
-      <nav className={menuActive?'mobile-menu':'hidden'}>
-          <ul className="mobile-nav-item" 
-            onClick={() => setMenuActive(!menuActive)}
-          >
+        <nav className={menuActive?'mobile-menu':'hidden'} onClick={() => setMenuActive(!menuActive)}>
+
+          <div className="mobile-nav-item" >
+              <div className='mobile-list-item'>X</div>
               <Link href="#projects" className='mobile-list-item'>Projects</Link>
               <Link href="#about" className='mobile-list-item'>About</Link>
               <Link href="#contact" className='mobile-list-item'>Contact</Link>
@@ -54,8 +38,8 @@ const Navbar = () => {
                   <Image
                     alt='twitter'
                     src={twitter}
-                    height={32}
-                    width={32}
+                    height={28}
+                    width={28}
                   ></Image>
                 </div>
               </Link>
@@ -67,8 +51,8 @@ const Navbar = () => {
                   <Image
                     alt='github'
                     src={github}
-                    height={32}
-                    width={32}
+                    height={28}
+                    width={28}
                   ></Image>
                 </div>
               </Link>
@@ -80,71 +64,17 @@ const Navbar = () => {
                   <Image
                     alt='email'
                     src={email}
-                    height={32}
-                    width={32}
+                    height={28}
+                    width={28}
                   ></Image>
                 </div>
               </Link>
-          </ul>
-      </nav>
+            </div>
+        </nav>
+      </div>
+
       <style jsx>{`
-        .small-icon  {
-          padding: 0.3rem 0.6rem;
-          border-right: 2px solid var(--accent-primary);
-          margin-right: 1rem;
-        }
-        .navbar {
-          position: absolute;
-          top: 0;
-          width: 100%;
-          max-width: 1200px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          height: 100px;
-          padding: 0 1rem;
-        }
 
-        .mobile-nav-item {
-          display: flex;
-          align-items: flex-end;
-          flex-direction: column;
-        }
-        .mobile-menu {
-          position: absolute;
-          display: flex;
-          justify-content: flex-end;
-          top: 60px;
-          width: 100%;
-        }
-
-
-        .burger {
-          width: 35px;
-          height: 5px;
-          background-color: var(--fg-heading);
-          margin: 6px 0;
-        }
-
-
-
-        .hamburger {
-          display: none;
-        }
-
-        .hidden {
-          display: none;
-        }
-
-        @media (max-width: 700px) {
-          .hamburger {
-            display: block;
-          }
-          .menu {
-            display: none;
-          }
-        }
 
       `}</style>
     </>

@@ -62,7 +62,7 @@ const ContactSection = () => {
             <button type='submit'>Send message</button>
           </form>
           <div className='back-to-top'>
-            <Link alt='to-top' href='/'>
+            <Link alt='to-top' href='#hero'>
               <Image 
                 alt="to top button" 
                 src={toTop} 

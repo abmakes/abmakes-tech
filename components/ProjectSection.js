@@ -67,7 +67,11 @@ const ProjectSection = () => {
             <p>This project uses NextJs, Redux and Apache eCharts for the frontend. While Django Rest Framework and a PostGresQL Database make up the backend.</p>
 
             <div className="project-link">
-              <Link href='https://satstobits-nextjs.vercel.app/'>Visit site</Link>
+              <div className="gradient-border">
+                <div className="fill-primary">
+                <Link href='https://satstobits-nextjs.vercel.app/'>Visit site</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -113,7 +117,11 @@ const ProjectSection = () => {
             <p>It was built for mobile first and uses local browser storage used for the app data</p>
             <div className="project-link">
               <Link href='https://github.com/abmakes/dave-expense-tracker'>Github</Link>
-              <Link href='https://save-dave.netlify.app/'>Visit site</Link>
+              <div className="gradient-border">
+                <div className="fill-primary">
+                  <Link href='https://save-dave.netlify.app/'>Visit site</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -208,7 +216,11 @@ const ProjectSection = () => {
             <div className="project-link">
               <Link href='https://www.figma.com/file/ahnGupP4JjTdVJDTRfMRF2/edie-homepage?node-id=0%3A1'>Design</Link>
               <Link href='https://github.com/abmakes/Company-profile-nextjs'>Github</Link>
-              <Link href='https://the-edie-company.netlify.app/'>Visit site</Link>
+              <div className="gradient-border">
+                <div className="fill-primary">
+                  <Link href='https://the-edie-company.netlify.app/'>Visit site</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -306,6 +318,7 @@ const ProjectSection = () => {
        .project-link {
         margin-top: 1rem;
         align-self: flex-end;
+        align-items: center;
        }
 
        @media (max-width: 700px){

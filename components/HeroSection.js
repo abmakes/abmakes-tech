@@ -1,7 +1,7 @@
 import { Poppins } from '@next/font/google'
 import { motion } from "framer-motion"
 import Image from 'next/image'
-import HeroImage from "../public/portrait2.png"
+import HeroImage from "../public/dough.svg"
 import Navbar from '../components/Navbar'
 
 const poppins = Poppins({ 
@@ -53,10 +53,19 @@ const HeroSection = () => {
             </h3>
           </div>
           <div className='hero-right'>
-            <div className='hero-image' 
-              style={{imageRendering: "crisp-edges"}}
+            <motion.div  
+              className="gradient-shift"
             >
-              <Image 
+              <svg width="255" height="192" viewBox="0 0 255 192" fill="#309309" 
+              xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <clipPath id="dough">
+                    <path d="M239.791 65.4178C202.583 47.3356 189 57.5 198.547 18.5889C208.094 -20.3222 62.9916 12.8537 74.9599 48.8726C85.704 81.2075 54.0561 77.9392 12.8546 112.892C-57.9071 172.922 226.24 224.974 226.24 161.735C226.24 103.5 277 83.5 239.791 65.4178Z" stroke="#12100F" stroke-width="2"/>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              {/* <Image 
                 alt="blue man" 
                 src={HeroImage}
                 style={{
@@ -66,8 +75,8 @@ const HeroSection = () => {
                   height: 'auto',
                 }}  
                 quality={100}
-              ></Image>
-            </div>
+              ></Image> */}
+            </motion.div>
           </div>
         </div>
       </div>
@@ -114,6 +123,7 @@ const HeroSection = () => {
           }
 
           .hero-left {
+            width: 100%;
             justify-content: flex-end;
           }
         }

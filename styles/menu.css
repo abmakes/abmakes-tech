@@ -1,0 +1,74 @@
+/* 
+  NAVBAR FORMATIING
+*/
+
+
+.mobile-list-item {
+  list-style: none;
+  font-size: 15px;
+  width: 100%;
+  padding: 0.6rem;
+  text-align: right;
+  border-right: 3px solid var(--accent-primary);
+  /* margin-right: 1rem; */
+}
+
+.mobile-list-item:hover {
+  color: #808080;
+  border-right: 3px solid #808080;
+}
+
+.mobile-nav-item {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.mobile-menu {
+  height: 100%;
+  position: relative;
+  display: flex;
+  padding-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.show {
+  position: relative;
+  display: inline-block;
+  padding: 0.9rem 0.5rem;
+  border-right: 3px solid var(--accent-primary);
+  cursor: pointer;
+}
+
+.show:hover {
+  scale: 1.2;
+}
+
+.hidden {
+  display: none;
+}
+
+.small-icon  {
+  padding: 0.3rem 0.6rem;
+  border-right: 3px solid var(--accent-primary);
+  {/* margin-right: 1rem; */}
+}
+
+.small-icon:hover {
+  filter: brightness(0) saturate(20) invert(50%);
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 1rem;
+  z-index: 99;
+  overflow: hidden;
+}

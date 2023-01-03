@@ -1,10 +1,15 @@
-import { Poppins } from '@next/font/google'
+import { Poppins, Bitter } from '@next/font/google'
 import { motion } from "framer-motion"
 import Image from 'next/image'
-import HeroImage from "../public/dough.svg"
+import HeroImage from "../public/contour.svg"
 import Navbar from '../components/Navbar'
 
 const poppins = Poppins({ 
+  subsets: ['latin'],
+  weight: ['400', '500'] 
+})
+
+const bitter = Bitter({ 
   subsets: ['latin'],
   weight: ['400', '500'] 
 })
@@ -16,10 +21,20 @@ const HeroSection = () => {
     <>
       <div className="section" id="hero">
         <Navbar />
+        <div className='bg-image'>
+          <Image alt="contour background" src={HeroImage} 
+          style={{
+            position: "absolute",
+            width: "100vw",
+            height: "120vh",
+            top: 0, 
+            left: 0
+          }}></Image>
+        </div>
         <div className='hero-container'>
           <div className='hero-left'>
             <text>Hi, my name is </text>
-            <h1 className={poppins.className}>Adriaan Boshoff</h1>
+            <h1 className={poppins.className}>Adriaan <span className='mobile-hide'>Boshoff</span></h1>
             
             <h3
               // initial={{ x: -100 }}
@@ -122,7 +137,12 @@ const HeroSection = () => {
             height: 50vh;
           }
 
+          .mobile-hide {
+            display: none;
+          }
+
           .hero-left {
+            padding-left: 3rem;
             width: 100%;
             justify-content: flex-end;
           }

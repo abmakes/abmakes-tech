@@ -69,8 +69,8 @@ p {
   margin-bottom: 0.8rem;
 }
 h1 {
-  font-size: 64px;
-  line-height: 80px;
+  font-size: 72px;
+  line-height: 90px;
   font-weight: 400;
 }
 h2 {
@@ -121,10 +121,10 @@ a:hover {
     justify-content: center;
   }
 
-  h1 {
+  /* h1 {
     font-size: 40px;
     line-height: 60px;
-  }
+  } */
 
   h2 {
     font-size: 28px;
@@ -145,10 +145,10 @@ a:hover {
     justify-content: center;
   }
 
-  h1 {
+  /* h1 {
     font-size: 54px;
     line-height: 72px;
-  }
+  } */
 
   h2 {
     font-size: 40px;

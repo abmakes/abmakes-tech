@@ -59,33 +59,34 @@ const ContactSection = () => {
               <textarea id="message" rows="4" required></textarea>
               <label>type your message</label>
             </div>
-            <button type='submit'>Send message</button>
+            <button type='submit'>Send message</button>          
+            <div className='back-to-top'>
+              <Link alt='to-top' href='#hero'>
+                <Image 
+                  alt="to top button" 
+                  src={toTop} 
+                  width={40} 
+                  height={40}
+                  style={{
+                    position: "static",
+                    right: "0px",
+                    bottom: "0px",
+                    zindex: "3",
+                    cursor: "pointer",
+                    color: "#000000",
+                  }}
+                ></Image>
+              </Link>
+            </div>
           </form>
-          <div className='back-to-top'>
-            <Link alt='to-top' href='#hero'>
-              <Image 
-                alt="to top button" 
-                src={toTop} 
-                width={38} 
-                height={81}
-                style={{
-                  position: "relative",
-                  right: "0px",
-                  bottom: "10px",
-                  zindex: "3",
-                  cursor: "pointer",
-                  color: "#000000",
-                }}
-              ></Image>
-            </Link>
-          </div>
+
         </motion.div>
         
       </div>
 
       <style jsx>{`
         .back-to-top {
-
+          padding-bottom: 1rem;
         }
         .thanks {10
           display: flex;
@@ -103,7 +104,7 @@ const ContactSection = () => {
           width: 100%;
           display: flex;
           flex-direction: column;
-          padding: 2rem;
+          padding: 0 2rem;
           gap: 1rem;
           justify-content: center;
           align-items: center;
@@ -125,6 +126,7 @@ const ContactSection = () => {
           color: #fafaf9;
           border-radius: 0.5rem;
           border: none;
+          margin-bottom: 1rem;
           padding: 0.5rem 2rem;
         }
 

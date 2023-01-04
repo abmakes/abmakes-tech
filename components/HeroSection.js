@@ -33,39 +33,41 @@ const HeroSection = () => {
         </div>
         <div className='hero-container'>
           <div className='hero-left'>
-            <text>Hi, my name is </text>
-            <h1 className={poppins.className}>Adriaan <span className='mobile-hide'>Boshoff</span></h1>
-            
-            <h3
-              // initial={{ x: -100 }}
-              // animate={{
-              //   x: [-100, 100, 0 ]
-              // }}
-              // transition={{
-              //   type: "spring",
-              //   duration: 0.6,
-              //   times: [0.2, 0.2, 0.2],
-              // }}
-            >
-              <span>I love </span>
-              <span>
-                <motion.div
-                  className='love-1'
-                  animate={{
-                    rotateX: [0, 360]
-                  }}
-                  transition={{
-                    duration: 2,
-                    type: "spring",
-                    times: [0, 0.5, 1],
-                    repeat: Infinity,
-                    repeatDelay: 2
-                  }}
-                > web development</motion.div>
-                <motion.span hidden> creating value</motion.span>
-                <motion.span hidden> pizza</motion.span>
-              </span>
-            </h3>
+            <div className='hero-text-group'>
+              <text>Hi, my name is </text>
+              <h1 className={poppins.className}>Adriaan <span className='mobile-hide'>Boshoff</span></h1>
+              
+              <h3
+                // initial={{ x: -100 }}
+                // animate={{
+                //   x: [-100, 100, 0 ]
+                // }}
+                // transition={{
+                //   type: "spring",
+                //   duration: 0.6,
+                //   times: [0.2, 0.2, 0.2],
+                // }}
+              >
+                <span>I love </span>
+                <span>
+                  <motion.div
+                    className='love-1'
+                    animate={{
+                      rotateX: [0, 360]
+                    }}
+                    transition={{
+                      duration: 2,
+                      type: "spring",
+                      times: [0, 0.5, 1],
+                      repeat: Infinity,
+                      repeatDelay: 2
+                    }}
+                  > web development</motion.div>
+                  <motion.span hidden> creating value</motion.span>
+                  <motion.span hidden> pizza</motion.span>
+                </span>
+              </h3>
+            </div>
           </div>
           <div className='hero-right'>
             <motion.div  
@@ -108,6 +110,7 @@ const HeroSection = () => {
           height: 50vh;
           justify-content: center;
           align-items: center;
+          z-index: 3;
         }
 
         .hero-left {
@@ -116,6 +119,7 @@ const HeroSection = () => {
           flex-direction: column;
           justify-content: center;
           padding: 1rem;
+          z-index: 3;
         }
 
         .hero-left h1 {
@@ -152,6 +156,10 @@ const HeroSection = () => {
         @media (min-width: 701px) and (max-width: 1120px) {
           .hero-right {
 
+          }
+
+          .mobile-hide {
+            display: none;
           }
         }
 

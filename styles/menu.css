@@ -2,11 +2,10 @@
   NAVBAR FORMATIING
 */
 
-
 .mobile-list-item {
   list-style: none;
   font-size: 15px;
-  width: 100%;
+  /* width: 100%; */
   padding: 0.6rem;
   text-align: right;
   border-right: 3px solid var(--accent-primary);
@@ -61,7 +60,7 @@
 .navbar {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: row;
@@ -70,5 +69,5 @@
   height: 100px;
   padding: 0 1rem;
   z-index: 99;
-  overflow: hidden;
+  overflow-x: clip;
 }

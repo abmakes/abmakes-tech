@@ -63,8 +63,8 @@ const HeroSection = () => {
                       repeatDelay: 2
                     }}
                   > web development</motion.div>
-                  <motion.span hidden> creating value</motion.span>
-                  <motion.span hidden> pizza</motion.span>
+                  {/* <motion.span hidden> creating value</motion.span>
+                  <motion.span hidden> pizza</motion.span> */}
                 </span>
               </h3>
             </div>

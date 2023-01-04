@@ -37,50 +37,50 @@ const ContactSection = () => {
           </motion.div>
         </div>
 
-        <motion.div 
-          className='contact-right'
-          initial={{ x: 200, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-        >
-          <form className='form-group' onSubmit={(e) => {
-              const { message, email, subject } = e.target
-              e.preventDefault();
-              console.log(email.value, subject.value, message.value)
-            }}>
-            <div className="input-group">      
-              <input id="email" type="text" required></input>
-              <label>email</label>
-            </div>
-            <div className="input-group">      
-              <input id="subject" type="text" required></input>
-              <label>subject</label>
-            </div>
-            <div className="input-group">      
-              <textarea id="message" rows="4" required></textarea>
-              <label>type your message</label>
-            </div>
-            <button type='submit'>Send message</button>          
-            <div className='back-to-top'>
-              <Link alt='to-top' href='#hero'>
-                <Image 
-                  alt="to top button" 
-                  src={toTop} 
-                  width={40} 
-                  height={40}
-                  style={{
-                    position: "static",
-                    right: "0px",
-                    bottom: "0px",
-                    zindex: "3",
-                    cursor: "pointer",
-                    color: "#000000",
-                  }}
-                ></Image>
-              </Link>
-            </div>
-          </form>
-
-        </motion.div>
+        <div className='contact-right'>
+          <motion.div
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+          >
+            <form className='form-group' onSubmit={(e) => {
+                const { message, email, subject } = e.target
+                e.preventDefault();
+                console.log(email.value, subject.value, message.value)
+              }}>
+              <div className="input-group">
+                <input id="email" type="text" required></input>
+                <label>email</label>
+              </div>
+              <div className="input-group">
+                <input id="subject" type="text" required></input>
+                <label>subject</label>
+              </div>
+              <div className="input-group">
+                <textarea id="message" rows="4" required></textarea>
+                <label>type your message</label>
+              </div>
+              <button type='submit'>Send message</button>
+              <div className='back-to-top'>
+                <Link alt='to-top' href='#hero'>
+                  <Image
+                    alt="to top button"
+                    src={toTop}
+                    width={40}
+                    height={40}
+                    style={{
+                      position: "static",
+                      right: "0px",
+                      bottom: "0px",
+                      zindex: "3",
+                      cursor: "pointer",
+                      color: "#000000",
+                    }}
+                  ></Image>
+                </Link>
+              </div>
+            </form>
+          </motion.div>
+        </div>
         
       </div>
 
@@ -88,7 +88,7 @@ const ContactSection = () => {
         .back-to-top {
           padding-bottom: 1rem;
         }
-        .thanks {10
+        .thanks {
           display: flex;
           flex-wrap: wrap;
           padding: 0 1rem 0 2rem;
@@ -102,9 +102,10 @@ const ContactSection = () => {
 
         .form-group {
           width: 100%;
+          min-width: 300px;
           display: flex;
           flex-direction: column;
-          padding: 0 2rem;
+          padding: 0 0rem;
           gap: 1rem;
           justify-content: center;
           align-items: center;
@@ -124,6 +125,7 @@ const ContactSection = () => {
         button {
           background-color: var(--accent-primary);
           color: #fafaf9;
+          font-size: 15px;
           border-radius: 0.5rem;
           border: none;
           margin-bottom: 1rem;
@@ -138,7 +140,7 @@ const ContactSection = () => {
         }
 
         .social-icons {
-          display: flex;Name
+          display: flex;
           flex-direction: row;
           gap: 2rem;
           justify-content: center;

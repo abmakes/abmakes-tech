@@ -302,7 +302,7 @@ const ProjectSection = () => {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 80%;
+        width: 85%;
         min-width: 320px;
         padding: 1rem 2rem;
        }
@@ -348,7 +348,7 @@ const ProjectSection = () => {
         }
 
         p {
-          font-size: 14px;
+          font-size: 15px;
           line-height: 20px;
         }
 

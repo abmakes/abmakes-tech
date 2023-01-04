@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1200px;
+  --max-width: 100%;
   --border-radius: 12px;
 
   --accent-primary: #991b1b;
@@ -29,7 +29,14 @@
     --fg-heading: #e4e4e7;
     --bg-primary: #12100f;
     --bg-secondary: #171717;
+  }
 
+  html {
+    color-scheme: dark;
+  }
+
+  .filter-white {
+    filter: saturate(0%) invert(100%);
   }
 }
 
@@ -85,15 +92,6 @@ h3 {
 }
 
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  .filter-white {
-    filter: saturate(0%) invert(100%);
-  }
-}
 
 .section {
   background-color: var(--bg-primary);
@@ -182,6 +180,7 @@ a:hover {
 .contact-right {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background-color: var(--accent-secondary);
 }
 
@@ -235,6 +234,7 @@ input[type=text-area] {
   .contact-left, .contact-right {
     height: 50%;
     width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -250,7 +250,7 @@ input[type=text-area] {
   clip-path: url(#dough);
   background: linear-gradient(121deg, #0027ff, #09005a, #00d2ae, #0a196b);
   background-size: 800% 800%;
-
+  overflow-x: hidden;
   -webkit-animation: gradientShift 16s ease infinite;
   -moz-animation: gradientShift 16s ease infinite;
   animation: gradientShift 16s ease infinite;

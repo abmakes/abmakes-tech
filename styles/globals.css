@@ -15,7 +15,8 @@
 
   --fg-text: #171717;
   --fg-heading: #12100f;
-  --bg-primary: #fafaf9;
+  --fg-secondary: rgb(220, 220, 220);
+  --bg-primary: #frgb(17, 14, 14)
   --bg-secondary: #e4e4e7;
 
 }
@@ -27,6 +28,7 @@
   :root {
     --fg-text: #d6d3d1;
     --fg-heading: #e4e4e7;
+    --fg-secondary: #232323;
     --bg-primary: #12100f;
     --bg-secondary: #171717;
   }
@@ -162,6 +164,10 @@ a:hover {
   width: 100%;
   min-width: 350px;
   padding: 1rem;
+}
+
+.project-image img:hover {
+  scale: 1.2;
 }
 
 .contact-right, .contact-left {

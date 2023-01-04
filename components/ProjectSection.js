@@ -272,7 +272,7 @@ const ProjectSection = () => {
         justify-content: center;
         font-size: 72px;
         font-weight: 700;
-        color: var(--fg-secondary);
+        color: var(--fg-heading);
         padding: 2rem 0 0 0;
         z-index: 10;
        }
@@ -307,12 +307,12 @@ const ProjectSection = () => {
         padding: 1rem 2rem;
        }
 
-       .project-image {
+       {/* .project-image {
         display: flex;
         justify-content: center;
         width: 100%;
         min-width: 350px;
-       }
+       } */}
 
 
        .project-link {

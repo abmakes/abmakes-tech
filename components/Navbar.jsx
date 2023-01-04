@@ -75,6 +75,18 @@ const Navbar = () => {
 
       <style jsx>{`
 
+      @media (min-width: 1300px) {
+        .show {
+          position: fixed;
+          right: 10vw;
+        }
+      }
+      @media (min-width: 1600px) {
+        .show {
+          position: fixed;
+          right: 15vw;
+        }
+      }
 
       `}</style>
     </>

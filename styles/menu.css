@@ -33,7 +33,8 @@
 }
 
 .show {
-  position: relative;
+  position: fixed;
+  right: 1rem;
   display: inline-block;
   padding: 0.9rem 0.5rem;
   border-right: 3px solid var(--accent-primary);
@@ -70,4 +71,11 @@
   padding: 0 1rem;
   z-index: 99;
   overflow-x: clip;
+}
+
+@media (min-width: 1200px) {
+  .show {
+    position: fixed;
+    left: 1100px;
+  }
 }

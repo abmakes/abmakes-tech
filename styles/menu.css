@@ -72,10 +72,3 @@
   z-index: 99;
   overflow-x: clip;
 }
-
-@media (min-width: 1200px) {
-  .show {
-    position: fixed;
-    left: 1100px;
-  }
-}

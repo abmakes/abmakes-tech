@@ -254,113 +254,113 @@ const ProjectSection = () => {
           align-items: center;
           column-gap: 0.5rem;
         }
-       .section {
-        height: 100%;
-        flex-direction: column;
-        padding-bottom: 4rem;
-       }
-       .project-link {
-        display: flex;
-        gap: 1rem;
-       }
+        .section {
+          height: 100%;
+          flex-direction: column;
+          padding-bottom: 4rem;
+        }
+        .project-link {
+          display: flex;
+          gap: 1rem;
+        }
 
-       .section-title {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: center;
-        font-size: 72px;
-        font-weight: 700;
-        color: var(--fg-heading);
-        padding: 2rem 0 0 0;
-        z-index: 10;
-       }
-
-       .section-title-rear {
-        position: relative;
-        width: 100%;
-        top: -1rem;
-        font-size: 200px;
-        font-weight: 700;
-        color: var(--bg-primary);
-        text-shadow: 3px 5px 0px var(--accent-secondary);
-        text-shadow: -1px -1px 0 #1d4ed8, 1px -1px 0 #1d4ed8, -1px 1px 0 #1d4ed8, 1px 1px 0 #1d4ed8;
-        z-index: 1;
-       }
-
-       .project-item {
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 4rem;
-        margin-bottom: 2rem;
-       }
-
-       .project-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 85%;
-        min-width: 320px;
-        padding: 1rem 2rem;
-       }
-
-       {/* .project-image {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        min-width: 350px;
-       } */}
-
-
-       .project-link {
-        margin-top: 1rem;
-        align-self: flex-end;
-        align-items: center;
-       }
-
-       @media (max-width: 700px){
         .section-title {
-          font-size: 48px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+          font-size: 72px;
+          font-weight: 700;
+          color: var(--fg-heading);
+          padding: 2rem 0 0 0;
+          z-index: 10;
         }
 
         .section-title-rear {
-          font-size: 72px;
-        }
-        .project-text {
-          padding: 2rem 0;
-          align-self: flex-start;
+          position: relative;
+          width: 100%;
+          top: -1rem;
+          font-size: 200px;
+          font-weight: 700;
+          color: var(--bg-primary);
+          text-shadow: 3px 5px 0px var(--accent-secondary);
+          text-shadow: -1px -1px 0 #1d4ed8, 1px -1px 0 #1d4ed8, -1px 1px 0 #1d4ed8, 1px 1px 0 #1d4ed8;
+          z-index: 1;
         }
 
         .project-item {
-          height: 100%;
-          padding: 3rem 0rem;
+          height: 100vh;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 4rem;
+          margin-bottom: 2rem;
         }
 
-        .project-text h2 {
-          font-size: 34px;
+        .project-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 85%;
+          min-width: 320px;
+          padding: 1rem 2rem;
         }
 
-        .project-image {
+        {/* .project-image {
+          display: flex;
+          justify-content: center;
           width: 100%;
+          min-width: 350px;
+        } */}
+
+
+        .project-link {
+          margin-top: 1rem;
+          align-self: flex-end;
+          align-items: center;
         }
 
-        p {
-          font-size: 15px;
-          line-height: 20px;
+        @media (max-width: 700px){
+          .section-title {
+            font-size: 48px;
+          }
+
+          .section-title-rear {
+            font-size: 72px;
+          }
+          .project-text {
+            padding: 2rem 0;
+            align-self: flex-start;
+          }
+
+          .project-item {
+            height: 100%;
+            padding: 3rem 0rem;
+          }
+
+          .project-text h2 {
+            font-size: 34px;
+          }
+
+          .project-image {
+            width: 100%;
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 20px;
+          }
+
+
         }
 
+        @media (min-width: 701px) and (max-width: 1120px) {
+          .section-title-rear {
+            font-size: 120px;
+          }
 
-       }
-
-       @media (min-width: 701px) and (max-width: 1120px) {
-        .section-title-rear {
-          font-size: 120px;
         }
-
-       }
       `}</style>
     </>
   );

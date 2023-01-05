@@ -255,7 +255,7 @@ input[type=text-area] {
   border: none;
   padding: 0.6rem 1.7rem;
   color: var(--fg-heading);
-  background-color: var(--bg-primary);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 2rem;
   /* background-color: #e4e4e7; */
   font-size: 20px;
@@ -264,9 +264,6 @@ input[type=text-area] {
   /* text-shadow: 2px 2px 2px #171717; */
 }
 
-.call-to-action:hover { 
-  scale: 0.9;
-}
 
 .gradient-shift {
   clip-path: url(#dough);

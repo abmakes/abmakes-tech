@@ -24,7 +24,7 @@ const HeroSection = () => {
         <Navbar />
         <div className='gradient-border'>
           <Link alt="view projects" href="#projects">
-            <button className='call-to-action'>view projects</button>
+            <button className='call-to-action'>scroll</button>
           </Link>
         </div>
         <div className='bg-image'>
@@ -108,13 +108,13 @@ const HeroSection = () => {
 
         .gradient-border {
           position: absolute;
-          bottom: 3rem;
+          bottom: 0.5rem;
           display: flex;
-          align-items: center;
+          align-items: flex-end;
           justify-content: center;
           margin-top: 2rem;
-          width: 13rem;
-          height: 3.5rem;
+          width: 0.3rem;
+          height: 8rem;
           z-index: 99;
           border-radius: 1.7rem;
           box-shadow: 1px 1px 5px #171717;
@@ -169,6 +169,7 @@ const HeroSection = () => {
           .hero-left {
             padding-left: 3rem;
             width: 100%;
+            height: 40vh;
             justify-content: flex-end;
           }
         }

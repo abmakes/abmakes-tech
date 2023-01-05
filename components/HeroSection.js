@@ -108,13 +108,14 @@ const HeroSection = () => {
 
         .gradient-border {
           position: absolute;
-          bottom: 0.5rem;
+          bottom: -1rem;
           display: flex;
           align-items: flex-end;
           justify-content: center;
           margin-top: 2rem;
+          padding-bottom: 1rem;
           width: 0.3rem;
-          height: 8rem;
+          height: 7rem;
           z-index: 99;
           border-radius: 1.7rem;
           box-shadow: 1px 1px 5px #171717;

@@ -1,6 +1,7 @@
 import { Poppins, Bitter } from '@next/font/google'
 import { motion } from "framer-motion"
 import Image from 'next/image'
+import Link from 'next/link'
 import HeroImage from "../public/contour.svg"
 import Navbar from '../components/Navbar'
 
@@ -21,6 +22,11 @@ const HeroSection = () => {
     <>
       <div className="section" id="hero">
         <Navbar />
+        <div className='gradient-border'>
+          <Link alt="view projects" href="#projects">
+            <button className='call-to-action'>view projects</button>
+          </Link>
+        </div>
         <div className='bg-image'>
           <Image alt="contour background" src={HeroImage} 
           style={{
@@ -99,6 +105,21 @@ const HeroSection = () => {
       </div>
 
       <style jsx>{`
+
+        .gradient-border {
+          position: absolute;
+          bottom: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2rem;
+          width: 13rem;
+          height: 3.5rem;
+          z-index: 99;
+          border-radius: 1.7rem;
+          box-shadow: 1px 1px 5px #171717;
+        }
+
         .hero-container {
           display: flex;
           flex-direction: row;
@@ -138,7 +159,7 @@ const HeroSection = () => {
             display: flex;
             align-items: flex-start;
             width: 100%;
-            height: 50vh;
+            height: 40vh;
           }
 
           .mobile-hide {

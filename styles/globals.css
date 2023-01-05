@@ -11,14 +11,11 @@
 /* GRADIENT BACKGROUND */
   /* https://codepen.io/P1N2O/pen/pyBNzX */
 
-
-
   --fg-text: #171717;
   --fg-heading: #12100f;
-  --fg-secondary: rgb(220, 220, 220);
-  --bg-primary: #frgb(17, 14, 14)
+  --fg-secondary: #dcdcdc;
+  --bg-primary: #ffffff;
   --bg-secondary: #e4e4e7;
-
 }
 /* *{
   border: 1px solid gold;
@@ -204,7 +201,7 @@ label {
   pointer-events:none;
   left: 1rem;
   top: 0.6rem;
-  transition:0.2s ease all; 
+  transition: 0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
@@ -250,6 +247,23 @@ input[type=text-area] {
     height: 50%;
     width: 100%;
   }
+}
+
+.call-to-action {
+  border: none;
+  padding: 0.6rem 1.7rem;
+  color: var(--fg-heading);
+  background-color: var(--bg-primary);
+  border-radius: 2rem;
+  /* background-color: #e4e4e7; */
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  /* text-shadow: 2px 2px 2px #171717; */
+}
+
+.call-to-action:hover { 
+  scale: 0.9;
 }
 
 .gradient-shift {

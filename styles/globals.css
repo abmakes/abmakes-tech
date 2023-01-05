@@ -8,6 +8,8 @@
   --accent-primary: #1d4ed8;
   --accent-secondary: #1d4fd883;
 
+  --dark-navy: #020c1b;
+
 /* GRADIENT BACKGROUND */
   /* https://codepen.io/P1N2O/pen/pyBNzX */
 
@@ -48,7 +50,8 @@
 html {
   display: flex;
   justify-content: center;
-  background-color: var(--bg-primary);
+  /* background-color: var(--bg-primary); */
+  background-color: var(--dark-navy);
 }
 
 body {
@@ -93,7 +96,8 @@ h3 {
 
 
 .section {
-  background-color: var(--bg-primary);
+  background-color: var(--dark-navy);
+  /* background-color: var(--bg-primary); */
   width: 100%;
   height: 100vh;
   display: flex;
